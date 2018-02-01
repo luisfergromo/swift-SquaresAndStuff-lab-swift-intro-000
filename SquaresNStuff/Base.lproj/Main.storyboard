@@ -1,10 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -17,12 +28,70 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpaceShip" translatesAutoresizingMaskIntoConstraints="NO" id="hLZ-y1-Jef">
+                                <rect key="frame" x="0.0" y="20" width="375" height="167"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbertEinstein" translatesAutoresizingMaskIntoConstraints="NO" id="lga-Lk-lz3">
+                                <rect key="frame" x="129" y="137" width="117" height="117"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lga-Lk-lz3" secondAttribute="height" multiplier="1:1" id="BF4-gn-VH7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Albert Einstein" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LI-9V-URQ">
+                                <rect key="frame" x="100" y="262" width="176" height="37"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="2" height="1"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DHk-Ae-F7V">
+                                <rect key="frame" x="0.0" y="306" width="375" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="EVF-kx-lS2"/>
+                                </constraints>
+                                <string key="text">Albert Einstein was a German-born theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics. His work is also known for its influence on the philosophy of science. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k9r-rb-NiE">
+                                <rect key="frame" x="0.0" y="444" width="375" height="223"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hLZ-y1-Jef" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="2PS-06-vUk"/>
+                            <constraint firstAttribute="trailing" secondItem="DHk-Ae-F7V" secondAttribute="trailing" id="7mE-9G-DnX"/>
+                            <constraint firstItem="2LI-9V-URQ" firstAttribute="centerX" secondItem="lga-Lk-lz3" secondAttribute="centerX" id="BLe-n4-eXQ"/>
+                            <constraint firstItem="lga-Lk-lz3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FHY-Oy-V9U"/>
+                            <constraint firstItem="hLZ-y1-Jef" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="HhG-Tq-amD"/>
+                            <constraint firstItem="DHk-Ae-F7V" firstAttribute="trailing" secondItem="k9r-rb-NiE" secondAttribute="trailing" id="Jfz-c7-KkD"/>
+                            <constraint firstItem="lga-Lk-lz3" firstAttribute="top" secondItem="hLZ-y1-Jef" secondAttribute="bottom" constant="-50" id="KUR-RI-JmJ"/>
+                            <constraint firstItem="DHk-Ae-F7V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OxX-Dw-k4b"/>
+                            <constraint firstItem="lga-Lk-lz3" firstAttribute="height" secondItem="hLZ-y1-Jef" secondAttribute="height" multiplier="0.7" id="R6D-ou-A5O"/>
+                            <constraint firstItem="DHk-Ae-F7V" firstAttribute="top" secondItem="2LI-9V-URQ" secondAttribute="bottom" constant="7.5" id="UYy-FB-vel"/>
+                            <constraint firstItem="2LI-9V-URQ" firstAttribute="top" secondItem="lga-Lk-lz3" secondAttribute="bottom" constant="8" id="ZXf-l7-vk0"/>
+                            <constraint firstItem="DHk-Ae-F7V" firstAttribute="leading" secondItem="k9r-rb-NiE" secondAttribute="leading" id="dbK-Fe-6x8"/>
+                            <constraint firstItem="hLZ-y1-Jef" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hum-EU-wE9"/>
+                            <constraint firstItem="k9r-rb-NiE" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="mXI-5B-nhh"/>
+                            <constraint firstItem="k9r-rb-NiE" firstAttribute="top" secondItem="DHk-Ae-F7V" secondAttribute="bottom" constant="38" id="tti-6Y-FxC"/>
+                            <constraint firstItem="hLZ-y1-Jef" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="wI8-Ty-o8E"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="profileImageView" destination="lga-Lk-lz3" id="3bE-nl-UQU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="399.19999999999999" y="388.15592203898052"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AlbertEinstein" width="300" height="320"/>
+        <image name="SpaceShip" width="900" height="563"/>
+    </resources>
 </document>
